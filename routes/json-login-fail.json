@@ -1,0 +1,8 @@
+{
+  "error_code": "user.invalidPassword",
+  "error_message": "Password is incorrect.",
+  "debug_info": {
+    "start_time": 1447937828704,
+    "duration": 3
+  }
+}

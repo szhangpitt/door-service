@@ -1,0 +1,86 @@
+{
+  "result": {
+    "id": 1,
+    "street1": null,
+    "street2": null,
+    "city": null,
+    "borough": {
+      "city": {
+        "state": {
+          "id": 3,
+          "name": "New York",
+          "symbol": "NY",
+          "countryId": 1
+        },
+        "county": null,
+        "id": 1,
+        "name": "New York City",
+        "label": "NewYork",
+        "geoJsonPath": null
+      },
+      "id": 1,
+      "name": "Manhattan",
+      "label": "Manhattan",
+      "geoJsonPath": null
+    },
+    "neighborhood": null,
+    "zipCode": null,
+    "latitude": null,
+    "longitude": null,
+    "numOfBedrooms": 1,
+    "numOfBaths": 2.0,
+    "totalNumOfRooms": 7,
+    "listingPrice": 1500000,
+    "area": 2600,
+    "lotSize": 0.0,
+    "lotSizeUnit": "sqft",
+    "description": "this is nice house in a nice neighborhood",
+    "propertyType": "condo",
+    "buildYear": null,
+    "annualPropertyTax": null,
+    "propertyTaxRate": null,
+    "landAssessment": null,
+    "buildingAssessment": null,
+    "hoaFee": null,
+    "status": "initial",
+    "published_on": null,
+    "expireAfterPublishDays": 365,
+    "createdBy": {
+      "id": 1,
+      "email": "foo@bar.com",
+      "type": "agent",
+      "interested_area": [
+        {
+          "area": "manhattan"
+        }
+      ],
+      "interested_property_type": [
+        {
+          "property_type": "condo"
+        },
+        {
+          "property_type": "sfh"
+        }
+      ],
+      "interested_factor": [
+        {
+          "factor": "school"
+        }
+      ],
+      "interest_time_to_buy": "month-3"
+    },
+    "media": [
+      {
+        "url": "hello1.com"
+      },
+      {
+        "url": "images/property/11/6a6c95d93fa8274fb7d86a979aa50e141b3af71b"
+      }
+    ]
+  },
+  "count": 1,
+  "debug_info": {
+    "start_time": 1451057061955,
+    "duration": 8
+  }
+}

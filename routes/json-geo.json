@@ -1,0 +1,228 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "type": "city",
+      "label": "New York",
+      "parent": {
+        "value": null
+      }
+    },
+    {
+      "id": 2,
+      "type": "city",
+      "label": "Great Neck",
+      "parent": {
+        "value": null
+      }
+    },
+    {
+      "id": 3,
+      "type": "city",
+      "label": "Jersey City",
+      "parent": {
+        "value": null
+      }
+    },
+    {
+      "id": 4,
+      "type": "city",
+      "label": "city.label.Washington",
+      "parent": {
+        "value": null
+      }
+    },
+    {
+      "id": 1,
+      "type": "borough",
+      "label": "Manhattan",
+      "parent": {
+        "value": {
+          "id": 1,
+          "type": "city"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "type": "borough",
+      "label": "Queens",
+      "parent": {
+        "value": {
+          "id": 1,
+          "type": "city"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "type": "borough",
+      "label": "Brooklyn",
+      "parent": {
+        "value": {
+          "id": 1,
+          "type": "city"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "type": "borough",
+      "label": "Bronx",
+      "parent": {
+        "value": {
+          "id": 1,
+          "type": "city"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "type": "borough",
+      "label": "Staten Island",
+      "parent": {
+        "value": {
+          "id": 1,
+          "type": "city"
+        }
+      }
+    },
+    {
+      "id": 1,
+      "type": "neighborhood",
+      "label": "Midtown West",
+      "parent": {
+        "value": {
+          "id": 1,
+          "type": "borough"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "type": "neighborhood",
+      "label": "Midtown East",
+      "parent": {
+        "value": {
+          "id": 1,
+          "type": "borough"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "type": "neighborhood",
+      "label": "Upper West",
+      "parent": {
+        "value": {
+          "id": 1,
+          "type": "borough"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "type": "neighborhood",
+      "label": "Upper East",
+      "parent": {
+        "value": {
+          "id": 1,
+          "type": "borough"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "type": "neighborhood",
+      "label": "Chelsea",
+      "parent": {
+        "value": {
+          "id": 1,
+          "type": "borough"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "type": "neighborhood",
+      "label": "Forest Hills",
+      "parent": {
+        "value": {
+          "id": 2,
+          "type": "borough"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "type": "neighborhood",
+      "label": "Long Island City",
+      "parent": {
+        "value": {
+          "id": 2,
+          "type": "borough"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "type": "neighborhood",
+      "label": "Flushing",
+      "parent": {
+        "value": {
+          "id": 2,
+          "type": "borough"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "type": "neighborhood",
+      "label": "Bayside",
+      "parent": {
+        "value": {
+          "id": 2,
+          "type": "borough"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "type": "neighborhood",
+      "label": "Elmhurst",
+      "parent": {
+        "value": {
+          "id": 2,
+          "type": "borough"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "type": "neighborhood",
+      "label": "Rego Park",
+      "parent": {
+        "value": {
+          "id": 2,
+          "type": "borough"
+        }
+      }
+    },
+    {
+      "id": 12,
+      "type": "neighborhood",
+      "label": "Woodside",
+      "parent": {
+        "value": {
+          "id": 2,
+          "type": "borough"
+        }
+      }
+    }
+  ],
+  "count": 21,
+  "debug_info": {
+    "start_time": 1451327817509,
+    "duration": 14
+  }
+}

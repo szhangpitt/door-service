@@ -1,0 +1,31 @@
+{
+      "result": {
+        "id": 1,
+        "email": "foo@bar.com",
+        "type": "buyer",
+        "interested_area": [
+          {
+            "area": "shanghai"
+          }
+        ],
+        "interested_property_type": [
+          {
+            "property_type": "condo"
+          },
+          {
+            "property_type": "sfh"
+          }
+        ],
+        "interested_factor": [
+          {
+            "factor": "school"
+          }
+        ],
+        "interest_time_to_buy": "month-12"
+      },
+      "count": 1,
+      "debug_info": {
+        "start_time": 1450254794088,
+        "duration": 14
+      }
+    }

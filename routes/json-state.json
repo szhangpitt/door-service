@@ -1,0 +1,39 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "name": "California",
+      "symbol": "CA",
+      "countryId": 1
+    },
+    {
+      "id": 2,
+      "name": "Connecticut",
+      "symbol": "CT",
+      "countryId": 1
+    },
+    {
+      "id": 3,
+      "name": "New York",
+      "symbol": "NY",
+      "countryId": 1
+    },
+    {
+      "id": 4,
+      "name": "New Jersey",
+      "symbol": "NJ",
+      "countryId": 1
+    },
+    {
+      "id": 5,
+      "name": "Washington",
+      "symbol": "WA",
+      "countryId": 1
+    }
+  ],
+  "count": 5,
+  "debug_info": {
+    "start_time": 1451327817508,
+    "duration": 4
+  }
+}

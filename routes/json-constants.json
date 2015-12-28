@@ -1,0 +1,38 @@
+{
+  "LOT_SIZE_UNIT": [{
+    "value": "sqft",
+    "label": "sqft"
+  }, {
+    "value": "acre",
+    "label": "acre"
+  }],
+  "PROPERTY_TYPES": [{
+    "label": "Condo",
+    "value": "condo"
+  }, {
+    "label": "Single-family",
+    "value": "single"
+  }, {
+    "label": "Semi-detached",
+    "value": "semi"
+  }, {
+    "label": "Townhouse",
+    "value": "town"
+  }, {
+    "label": "Co-op",
+    "value": "co-op"
+  }, {
+    "label": "Other",
+    "value": "other"
+  }],
+  "PROPERTY_STATUS": [{
+    "value": "open",
+    "label": "Open"
+  }, {
+    "value": "initial",
+    "label": "Initial"
+  }, {
+    "value": "closed",
+    "label": "Closed"
+  }]
+}

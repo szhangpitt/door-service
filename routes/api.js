@@ -63,6 +63,7 @@ router.post('/auth', delay, function (req, res, next) {
 
     token = jwt.sign(user, SECRET, {expiresIn: '2m'});
 
+    res.header('Authorization', token);
     res.json(
         lodash.assign({
             'token': token
@@ -106,7 +107,15 @@ router.get('/property/:id', function (req, res) {
     res.json(require('./json-property'));
 });
 
+router.put('/property/:id', function (req, res) {
+    res.json(require('./json-property'));
+});
+
 router.get('/property', function (req, res) {
+    res.json(require('./json-property-array'));
+});
+
+router.get('/search_property', function (req, res) {
     res.json(require('./json-property-array'));
 });
 

@@ -9,9 +9,7 @@ var routes = require('./routes/index');
 var api = require('./routes/api');
 
 var app = express();
-var session = require('express-session');
 
-app.use(session({secret: 'doooooooooooooooor'}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -26,9 +24,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  res.setHeader("Access-Control-Allow-Credentials", "true");
+  // res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
   next();
 });
 

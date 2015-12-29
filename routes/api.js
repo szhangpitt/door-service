@@ -1,18 +1,30 @@
 var express = require('express');
 var router = express.Router();
+var jwt = require('jsonwebtoken');
+var lodash = require('lodash');
+var SECRET = require('../auth/secret').secret;
 
+function tok (req, res, next) {
 
-var authed = false;
+    var authHeader = lodash.get(req.headers, 'authorization') || '';
+    var token = authHeader.substr('Bearer '.length);
 
-
-function bouncer (req, res, next) {
-    if (req.path !== '/login' && !authed) {
-        console.log('bouncing', req.path);
-        res.status(401).json(err('You must log in.'));
-    } else {
-        next();
+    if (!token) {
+        console.log('no token');
+        return res.status(401).json(err('You must log in.'));
     }
 
+    console.log('token', token);
+
+    jwt.verify(token, SECRET, function (error, decoded) {
+        if (error) {
+            return res.status(401).json(err('You must log in.'));
+        }
+
+        req.decoded = decoded;
+        console.log('decoded', decoded);
+        next();
+    })
 }
 
 function delay (req, res, next) {
@@ -39,27 +51,34 @@ router.get('/constants', function (req, res, next) {
 });
 
 router.post('/auth', delay, function (req, res, next) {
+    var user;
+    var token;
+
     if (req.body.password !== 'password') {
-        authed = false;
-        res.status(401)
+        return res.status(401)
            .json(require('./json-login-fail'));
-    } else {
-        authed = true;
-        res.json(require('./json-login'));
     }
+
+    user = require('./json-user').result;
+
+    token = jwt.sign(user, SECRET, {expiresIn: '2m'});
+
+    res.json(
+        lodash.assign({
+            'token': token
+        }, require('./json-login'))
+    );
 });
 
 router.post('/logout', delay, function (req, res, next) {
-    authed = false;
     res.status(200).send();
 });
 
 router.post('/user', delay, function (req, res, next) {
-    authed = true;
     res.json(require('./json-user'));
 });
 
-router.post('/validate-email', delay, bouncer, function (req, res, next) {
+router.post('/validate-email', delay, tok, function (req, res, next) {
     if (req.body.code === 'asdf') {
         res.json(require('./json-user'));
     } else {
@@ -67,11 +86,11 @@ router.post('/validate-email', delay, bouncer, function (req, res, next) {
     }
 });
 
-router.put('/user', bouncer, function (req, res, next) {
+router.put('/user', tok, function (req, res, next) {
     res.json(require('./json-user'));
 });
 
-router.get('/user', bouncer, function (req, res, next) {
+router.get('/user', tok, function (req, res, next) {
     res.json(require('./json-user'));
 });
 

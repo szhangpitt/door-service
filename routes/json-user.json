@@ -5,7 +5,9 @@
         "type": "buyer",
         "interested_area": [
           {
-            "area": "shanghai"
+            "area": "Manhattan"
+          }, {
+            "area": "Flushing"
           }
         ],
         "interested_property_type": [
@@ -13,7 +15,7 @@
             "property_type": "condo"
           },
           {
-            "property_type": "sfh"
+            "property_type": "single"
           }
         ],
         "interested_factor": [

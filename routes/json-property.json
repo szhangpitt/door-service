@@ -25,8 +25,8 @@
     },
     "neighborhood": null,
     "zipCode": null,
-    "latitude": null,
-    "longitude": null,
+    "latitude": 40.761737,
+    "longitude": -73.9697183,
     "numOfBedrooms": 1,
     "numOfBaths": 2.0,
     "totalNumOfRooms": 7,
@@ -51,7 +51,9 @@
       "type": "agent",
       "interested_area": [
         {
-          "area": "manhattan"
+          "area": "Manhattan"
+        }, {
+          "area": "Flushing"
         }
       ],
       "interested_property_type": [
@@ -59,7 +61,7 @@
           "property_type": "condo"
         },
         {
-          "property_type": "sfh"
+          "property_type": "single"
         }
       ],
       "interested_factor": [

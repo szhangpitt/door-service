@@ -7,7 +7,8 @@ var SECRET = require('../auth/secret').secret;
 function tok (req, res, next) {
 
     var authHeader = lodash.get(req.headers, 'authorization') || '';
-    var token = authHeader.substr('Bearer '.length);
+    // var token = authHeader.substr('Bearer '.length);
+    var token = authHeader;
 
     if (!token) {
         console.log('no token');
@@ -46,10 +47,6 @@ router.use('/', function (req, res, next) {
     next();
 });
 
-router.get('/constants', function (req, res, next) {
-    res.json(require('./json-constants'));
-});
-
 router.post('/auth', delay, function (req, res, next) {
     var user;
     var token;
@@ -61,7 +58,7 @@ router.post('/auth', delay, function (req, res, next) {
 
     user = require('./json-user').result;
 
-    token = jwt.sign(user, SECRET, {expiresIn: '2m'});
+    token = jwt.sign(user, SECRET, {expiresIn: '20m'});
 
     res.header('Authorization', token);
     res.json(
@@ -87,7 +84,11 @@ router.post('/validate-email', delay, tok, function (req, res, next) {
     }
 });
 
-router.put('/user', tok, function (req, res, next) {
+router.get('/constants', function (req, res, next) {
+    res.json(require('./json-constants'));
+});
+
+router.put('/user', delay, tok, function (req, res, next) {
     res.json(require('./json-user'));
 });
 
@@ -107,20 +108,19 @@ router.get('/property/:id', function (req, res) {
     res.json(require('./json-property'));
 });
 
-router.put('/property/:id', function (req, res) {
+router.post('/property', delay, tok, function (req, res) {
     res.json(require('./json-property'));
 });
 
+router.put('/property/:id', delay, tok, function (req, res) {
+    res.json(require('./json-property'));
+});
 
 router.get('/search_property', function (req, res) {
     res.json(require('./json-property-array'));
 });
 
 router.get('/property', function (req, res) {
-    res.json(require('./json-property-array'));
-});
-
-router.get('/search_property', function (req, res) {
     res.json(require('./json-property-array'));
 });
 

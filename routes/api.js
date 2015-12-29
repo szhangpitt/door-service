@@ -111,6 +111,11 @@ router.put('/property/:id', function (req, res) {
     res.json(require('./json-property'));
 });
 
+
+router.get('/search_property', function (req, res) {
+    res.json(require('./json-property-array'));
+});
+
 router.get('/property', function (req, res) {
     res.json(require('./json-property-array'));
 });

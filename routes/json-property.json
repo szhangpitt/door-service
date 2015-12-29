@@ -71,10 +71,22 @@
     },
     "media": [
       {
-        "url": "hello1.com"
+        "url": "http://lorempixel.com/800/600/city/1"
       },
       {
-        "url": "images/property/11/6a6c95d93fa8274fb7d86a979aa50e141b3af71b"
+        "url": "http://lorempixel.com/800/600/city/2"
+      },
+      {
+        "url": "http://lorempixel.com/800/600/city/3"
+      },
+      {
+        "url": "http://lorempixel.com/800/600/city/4"
+      },
+      {
+        "url": "http://lorempixel.com/800/600/city/5"
+      },
+      {
+        "url": "http://lorempixel.com/800/600/city/6"
       }
     ]
   },

@@ -73,6 +73,7 @@ router.post('/auth', delay, function (req, res, next) {
             'flash_message': 'Welcome!'
         }, require('./json-login'))
     );
+    res.send(token);
 });
 
 

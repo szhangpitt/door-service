@@ -89,7 +89,7 @@ router.get('/constants', function (req, res, next) {
     res.json(require('./json-constants'));
 });
 
-router.put('/user', delay, tok, function (req, res, next) {
+router.put('/user/:id', delay, tok, function (req, res, next) {
     res.json(require('./json-user'));
 });
 

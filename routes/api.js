@@ -63,9 +63,10 @@ router.post('/auth', delay, function (req, res, next) {
     res.header('Authorization', token);
     res.json(
         lodash.assign({
-            'token': token
+            'jwt': token
         }, require('./json-login'))
     );
+    res.send(token);
 });
 
 router.post('/logout', delay, function (req, res, next) {
